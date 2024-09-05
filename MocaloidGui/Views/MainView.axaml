@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MocaloidGui.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="190"
+             x:Class="MocaloidGui.Views.MainView">
+	<Grid ShowGridLines="False" Margin="5"
+		  ColumnDefinitions="140,*,40"
+		  RowDefinitions="40,40,40,40,20"
+		  >
+		<TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Vocaloid VoiceBank:</TextBlock>
+		<TextBox x:Name="InputVBPath" Grid.Row="0" Grid.Column="1" Height="30"></TextBox>
+		<Button Click="OnInputVBSelectButton_Click" x:Name="InputVBButton" Grid.Row="0" Grid.Column="2" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"> ... </Button>
+
+		<TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">Utau Output Folder:</TextBlock>
+		<TextBox x:Name="OutputFolderPath" Grid.Row="1" Grid.Column="1" Height="30"></TextBox>
+		<Button Click="OnOutputFolderSelectButton_Click" x:Name="OutputFolderButton" Grid.Row="1" Grid.Column="2" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center"> ... </Button>
+
+		<Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" ColumnDefinitions="*,60,190">
+			<CheckBox x:Name="IsGCM" Grid.Column="0">Preserve isolated samples</CheckBox>
+			<TextBlock Grid.Column="1" Width="60" Height="20" VerticalAlignment="Center">VBLang:</TextBlock>
+			<ComboBox x:Name="selLang" Grid.Column="2" Width="150" SelectedIndex="0">
+				<ComboBoxItem>Auto</ComboBoxItem>
+				<ComboBoxItem>Japanese</ComboBoxItem>
+				<ComboBoxItem>English</ComboBoxItem>
+				<ComboBoxItem>Korean</ComboBoxItem>
+				<ComboBoxItem>Espanhol</ComboBoxItem>
+				<ComboBoxItem>Chinese</ComboBoxItem>
+			</ComboBox>
+		</Grid>
+		
+		<Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" ColumnDefinitions="250,*">
+			<Button x:Name="CleanButton" Click="OnCleanButton_Click" VerticalAlignment="Center" Grid.Column="0" HorizontalAlignment="Center">Clear Mocaloid</Button>
+			<Button x:Name="BuildButton" Click="OnBuildButton_Click" VerticalAlignment="Center" Grid.Column="1" HorizontalAlignment="Center">Build Mocaloid</Button>
+		</Grid>
+		<Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3">
+			<TextBlock x:Name="StatusTextBlock" Text="Status:Ready" HorizontalAlignment="Center" Background="Green"></TextBlock>
+		</Grid>
+	</Grid>
+</UserControl>

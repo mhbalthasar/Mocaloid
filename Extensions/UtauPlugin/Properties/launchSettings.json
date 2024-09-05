@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UtauPlugin": {
+      "commandName": "Project",
+      "commandLineArgs": "debug.tmp"
+    }
+  }
+}

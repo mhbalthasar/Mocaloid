@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="chunk">
+      <UniqueIdentifier>{e56e5078-7116-4af5-8182-07db4256a9a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QtCore">
+      <UniqueIdentifier>{e81ad099-c940-4ea5-9c66-1f9a427ab92c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExportHeader">
+      <UniqueIdentifier>{08934be7-ae4f-4503-8d0f-37f8daad6089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ExportFunction">
+      <UniqueIdentifier>{b44cd77f-486c-457b-bd27-b06b63c444fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QTAdapter">
+      <UniqueIdentifier>{fb7b5f1d-3bcd-4cc2-bf1a-a4c5a4114888}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\ReadMe.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\basechunk.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\chunkarray.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\chunkcreator.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\chunkreaderguards.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbsinger.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbtimbre.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbtimbremodel.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvarticulation.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvarticulationphu.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvarticulationphupart.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvoice.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvstationary.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvstationaryphu.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvstationaryphupart.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvvqmorph.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvvqmorphphu.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\dbvvqmorphphupart.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\emptychunk.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_articulationsection.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_audioframerefs.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_directory.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_eprguides.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_groupedphoneme.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_phonemegroup.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\item_phoneticunit.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\phonemedict.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\phonemegroup.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\propertytype.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\skipchunk.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\smsframe.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\smsgenerictrack.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\smsregion.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chunk\soundchunk.h">
+      <Filter>chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractanimation.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstracteventdispatcher.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractitemmodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractnativeeventfilter.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractproxymodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractstate.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qabstracttransition.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qalgorithms.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qanimationgroup.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qarraydata.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qarraydataops.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qarraydatapointer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_alpha.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv5.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv6.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv7.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_bfin.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_bootstrap.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_cxx11.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_gcc.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_ia64.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_integrity.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_mips.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_msvc.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_power.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_s390.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_sh4a.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_sparc.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_unix.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_vxworks.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_x86.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbasicatomic.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbasictimer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbitarray.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbuffer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbytearray.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qbytearraymatcher.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcache.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qchar.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcompilerdetection.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-dist.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-large.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-medium.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-minimal.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-nacl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-small.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcontainerfwd.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcontiguouscache.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcoreapplication.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcoreevent.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qcryptographichash.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qdatastream.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qdatetime.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qdebug.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qdir.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qdiriterator.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qeasingcurve.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qelapsedtimer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qendian.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qeventloop.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qeventtransition.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qexception.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfactoryinterface.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfeatures.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfile.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfiledevice.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfileinfo.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfilesystemwatcher.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfinalstate.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qflags.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_nacl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_vxworks.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_wince.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfuture.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfutureinterface.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfuturesynchronizer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qfuturewatcher.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qgenericatomic.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qglobal.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qglobalstatic.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qhash.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qhistorystate.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qidentityproxymodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qiodevice.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qisenum.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qitemselectionmodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qiterator.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qjsonarray.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qjsondocument.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qjsonobject.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qjsonvalue.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlibrary.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlibraryinfo.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qline.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlinkedlist.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlist.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlocale.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlocale_blackberry.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlockfile.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qlogging.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmap.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmargins.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmath.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmessageauthenticationcode.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmetaobject.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmetatype.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmimedata.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmimedatabase.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmimetype.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qmutex.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qnamespace.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qnumeric.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qobject.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qobject_impl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qobjectcleanuphandler.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qobjectdefs.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qobjectdefs_impl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qoldbasicatomic.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpair.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qparallelanimationgroup.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpauseanimation.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qplugin.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpluginloader.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpoint.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpointer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qprocess.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qprocessordetection.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qpropertyanimation.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qqueue.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qreadwritelock.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qrect.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qrefcount.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qregexp.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qregularexpression.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qresource.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qresultstore.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qrunnable.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsavefile.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qscopedpointer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qscopedvaluerollback.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsemaphore.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsequentialanimationgroup.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qset.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsettings.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qshareddata.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsharedmemory.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsharedpointer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsharedpointer_impl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsignalmapper.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsignaltransition.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsize.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsocketnotifier.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsortfilterproxymodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstack.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstandardpaths.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstate.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstatemachine.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstring.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstringbuilder.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstringlist.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstringlistmodel.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qstringmatcher.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsysinfo.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsystemdetection.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qsystemsemaphore.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qt_windows.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtcoreversion.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtemporarydir.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtemporaryfile.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtextboundaryfinder.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtextcodec.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtextstream.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qthread.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qthreadpool.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qthreadstorage.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtimeline.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtimer.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtranslator.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtypeinfo.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qtypetraits.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qurl.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qurlquery.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\quuid.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qvariant.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qvariantanimation.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qvarlengtharray.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qvector.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qwaitcondition.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qwineventnotifier.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\base_library\include\QtCore\qxmlstream.h">
+      <Filter>QtCore</Filter>
+    </ClInclude>
+    <ClInclude Include="..\qtadapter\define_type.h">
+      <Filter>QTAdapter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ddi.h">
+      <Filter>ExportHeader</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\chunk\basechunk.cpp">
+      <Filter>chunk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\chunk\chunkcreator.cpp">
+      <Filter>chunk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\chunk\propertytype.cpp">
+      <Filter>chunk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ddi.cpp">
+      <Filter>ExportFunction</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

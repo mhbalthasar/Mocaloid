@@ -1,0 +1,4 @@
+﻿type=editplugin
+folder=Mocaloid_G2PA_Spliter
+contentsdir=Mocaloid_G2PA_Spliter
+description=Mocaloid_G2PA_Spliter

@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CA30FB70-5C94-43A1-B6FB-8D6EBECD6A50}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DBParserLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>libddi</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>
+    </UseOfMfc>
+    <UseOfAtl>
+    </UseOfAtl>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>
+    </UseOfMfc>
+    <UseOfAtl>
+    </UseOfAtl>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Output\$(Configuration)\</OutDir>
+    <IntDir>$(TEMP)$(Configuration)\</IntDir>
+    <TargetName>libddi</TargetName>
+    <IncludePath>$(ProjectDir)..\base_library\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Output\$(Configuration)\</OutDir>
+    <IntDir>$(TEMP)$(Configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)..\base_library\include;$(IncludePath)</IncludePath>
+    <TargetName>libddi</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\ReadMe.MD" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\base_library\include\QtCore\qabstractanimation.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstracteventdispatcher.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstractitemmodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstractnativeeventfilter.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstractproxymodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstractstate.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qabstracttransition.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qalgorithms.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qanimationgroup.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qarraydata.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qarraydataops.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qarraydatapointer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_alpha.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv5.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv6.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_armv7.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_bfin.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_bootstrap.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_cxx11.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_gcc.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_ia64.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_integrity.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_mips.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_msvc.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_power.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_s390.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_sh4a.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_sparc.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_unix.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_vxworks.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qatomic_x86.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbasicatomic.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbasictimer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbitarray.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbuffer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbytearray.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qbytearraymatcher.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcache.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qchar.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcompilerdetection.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-dist.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-large.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-medium.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-minimal.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-nacl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig-small.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qconfig.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcontainerfwd.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcontiguouscache.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcoreapplication.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcoreevent.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qcryptographichash.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qdatastream.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qdatetime.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qdebug.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qdir.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qdiriterator.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qeasingcurve.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qelapsedtimer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qendian.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qeventloop.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qeventtransition.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qexception.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfactoryinterface.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfeatures.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfile.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfiledevice.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfileinfo.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfilesystemwatcher.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfinalstate.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qflags.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_nacl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_vxworks.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfunctions_wince.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfuture.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfutureinterface.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfuturesynchronizer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qfuturewatcher.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qgenericatomic.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qglobal.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qglobalstatic.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qhash.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qhistorystate.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qidentityproxymodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qiodevice.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qisenum.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qitemselectionmodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qiterator.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qjsonarray.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qjsondocument.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qjsonobject.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qjsonvalue.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlibrary.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlibraryinfo.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qline.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlinkedlist.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlist.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlocale.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlocale_blackberry.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlockfile.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qlogging.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmap.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmargins.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmath.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmessageauthenticationcode.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmetaobject.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmetatype.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmimedata.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmimedatabase.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmimetype.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qmutex.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qnamespace.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qnumeric.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qobject.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qobjectcleanuphandler.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qobjectdefs.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qobjectdefs_impl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qobject_impl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qoldbasicatomic.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpair.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qparallelanimationgroup.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpauseanimation.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qplugin.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpluginloader.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpoint.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpointer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qprocess.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qprocessordetection.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qpropertyanimation.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qqueue.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qreadwritelock.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qrect.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qrefcount.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qregexp.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qregularexpression.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qresource.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qresultstore.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qrunnable.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsavefile.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qscopedpointer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qscopedvaluerollback.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsemaphore.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsequentialanimationgroup.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qset.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsettings.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qshareddata.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsharedmemory.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsharedpointer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsharedpointer_impl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsignalmapper.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsignaltransition.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsize.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsocketnotifier.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsortfilterproxymodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstack.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstandardpaths.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstate.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstatemachine.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstring.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstringbuilder.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstringlist.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstringlistmodel.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qstringmatcher.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsysinfo.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsystemdetection.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qsystemsemaphore.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtcoreversion.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtemporarydir.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtemporaryfile.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtextboundaryfinder.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtextcodec.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtextstream.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qthread.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qthreadpool.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qthreadstorage.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtimeline.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtimer.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtranslator.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtypeinfo.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qtypetraits.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qt_windows.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qurl.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qurlquery.h" />
+    <ClInclude Include="..\base_library\include\QtCore\quuid.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qvariant.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qvariantanimation.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qvarlengtharray.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qvector.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qwaitcondition.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qwineventnotifier.h" />
+    <ClInclude Include="..\base_library\include\QtCore\qxmlstream.h" />
+    <ClInclude Include="..\chunk\basechunk.h" />
+    <ClInclude Include="..\chunk\chunkarray.h" />
+    <ClInclude Include="..\chunk\chunkcreator.h" />
+    <ClInclude Include="..\chunk\chunkreaderguards.h" />
+    <ClInclude Include="..\chunk\dbsinger.h" />
+    <ClInclude Include="..\chunk\dbtimbre.h" />
+    <ClInclude Include="..\chunk\dbtimbremodel.h" />
+    <ClInclude Include="..\chunk\dbvarticulation.h" />
+    <ClInclude Include="..\chunk\dbvarticulationphu.h" />
+    <ClInclude Include="..\chunk\dbvarticulationphupart.h" />
+    <ClInclude Include="..\chunk\dbvoice.h" />
+    <ClInclude Include="..\chunk\dbvstationary.h" />
+    <ClInclude Include="..\chunk\dbvstationaryphu.h" />
+    <ClInclude Include="..\chunk\dbvstationaryphupart.h" />
+    <ClInclude Include="..\chunk\dbvvqmorph.h" />
+    <ClInclude Include="..\chunk\dbvvqmorphphu.h" />
+    <ClInclude Include="..\chunk\dbvvqmorphphupart.h" />
+    <ClInclude Include="..\chunk\emptychunk.h" />
+    <ClInclude Include="..\chunk\item_articulationsection.h" />
+    <ClInclude Include="..\chunk\item_audioframerefs.h" />
+    <ClInclude Include="..\chunk\item_directory.h" />
+    <ClInclude Include="..\chunk\item_eprguides.h" />
+    <ClInclude Include="..\chunk\item_groupedphoneme.h" />
+    <ClInclude Include="..\chunk\item_phonemegroup.h" />
+    <ClInclude Include="..\chunk\item_phoneticunit.h" />
+    <ClInclude Include="..\chunk\phonemedict.h" />
+    <ClInclude Include="..\chunk\phonemegroup.h" />
+    <ClInclude Include="..\chunk\propertytype.h" />
+    <ClInclude Include="..\chunk\skipchunk.h" />
+    <ClInclude Include="..\chunk\smsframe.h" />
+    <ClInclude Include="..\chunk\smsgenerictrack.h" />
+    <ClInclude Include="..\chunk\smsregion.h" />
+    <ClInclude Include="..\chunk\soundchunk.h" />
+    <ClInclude Include="..\ddi.h" />
+    <ClInclude Include="..\qtadapter\define_type.h" />
+    <ClInclude Include="..\stdafx.h" />
+    <ClInclude Include="..\targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\chunk\basechunk.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\chunk\chunkcreator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\chunk\propertytype.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ddi.cpp" />
+    <ClCompile Include="..\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

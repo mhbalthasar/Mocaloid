@@ -1,0 +1,5 @@
+name=Mocaloid_Spliter
+execute=Mocaloid.UtauPlugin.exe
+shell=use
+ustversion=1.20
+notes=all
