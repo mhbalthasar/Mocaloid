@@ -107,7 +107,7 @@ public partial class MainView : UserControl
 
     private void OnBuildButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        ActionWorker.StartBuildMocaloid(InputVBPath.Text, OutputFolderPath.Text, IsGCM==null?false:(bool)IsGCM.IsChecked,selLang.SelectedIndex);
+        ActionWorker.StartBuildMocaloid(InputVBPath.Text, OutputFolderPath.Text, IsGCM==null?false:(bool)IsGCM.IsChecked,selLang.SelectedIndex-1);
     }
     private void OnCleanButton_Click(object sender, Avalonia.Interactivity.RoutedEventArgs e)
     {

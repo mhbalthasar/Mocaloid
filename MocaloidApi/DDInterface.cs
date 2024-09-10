@@ -349,7 +349,6 @@ namespace MocaloidApi
                         if (vs.SymbolType != PhonemeSymbolType.Vowel__Consonant_Vowel && vs.SymbolType != PhonemeSymbolType.Vowel__Vowel_Consonant) ret.Add(vs); 
                         break; 
                     case SampleFilterType.CVVC:
-                    case SampleFilterType.VCCV:
                         switch (vs.SymbolType)
                         {
                             case PhonemeSymbolType.Consonant_Vowel:
@@ -364,6 +363,8 @@ namespace MocaloidApi
                         break;
                     case SampleFilterType.VCV:
                         break;
+                    case SampleFilterType.VCCV:
+                        return VoiceSamples;//return all
                 }
             }
             return ret;
@@ -577,6 +578,9 @@ namespace MocaloidApi
                         ret.RightPadding = ret.RightPadding < (- ret.Preutter - pN10) ? (- ret.Preutter - pN10):-ret.Preutter;
                         ret.FixedLength =  ret.Preutter;
                         break;
+                    case PhonemeSymbolType.Vowel_Rest:
+                    case PhonemeSymbolType.Consonant_Rest:
+                    case PhonemeSymbolType.Consonant_Consonant:
                     default:
                         ret.Overlap = ((this.LabelGrid[1].voicedRange.startTime - lb) * 1000.0) / 2;
                         ret.Preutter = (this.LabelGrid[1].voicedRange.startTime - lb) * 1000.0;

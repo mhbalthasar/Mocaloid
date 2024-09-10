@@ -45,6 +45,9 @@ namespace Mocaloid
                 case VoiceBankLanguage.Chinese:
                     sampleFilter = SampleFilterType.CVVC;
                     break;
+                case VoiceBankLanguage.English:
+                    sampleFilter = SampleFilterType.VCCV;
+                    break;
                 default:
                     {
                         error = "Uninstantiated phonemizer for this language";
@@ -66,6 +69,7 @@ namespace Mocaloid
                 switch (samples[i].SymbolType)
                 {
                     case PhonemeSymbolType.Vowel_Only: PST = "VO"; break;
+                    case PhonemeSymbolType.Consonant_Only: PST = "CO"; break;
                     case PhonemeSymbolType.Vowel_Consonant: PST = "VC"; break;
                     case PhonemeSymbolType.Consonant_Vowel: PST = "CV"; break;
                     case PhonemeSymbolType.Vowel_Rest: PST = "VR"; break;
@@ -75,6 +79,7 @@ namespace Mocaloid
                     case PhonemeSymbolType.Vowel_Vowel: PST = "VV"; break;
                     case PhonemeSymbolType.Vowel__Consonant_Vowel: PST = "V_CV"; break;
                     case PhonemeSymbolType.Vowel__Vowel_Consonant: PST = "V_VC"; break;
+                    case PhonemeSymbolType.Consonant_Consonant: PST = "CC"; break;
                     default: PST = "OT"; break;
                 }
                 string FileName = PST + "__" + samples[i].PhonemeFileName + "__" + samples[i].PitchName.ToString() + ".wav";
@@ -142,6 +147,35 @@ namespace Mocaloid
                                     {
                                         otoList[PitchGroup].Add(otoLine);
                                         replaceRecordList.Add(CVVCSymbol, new Tuple<int, int>(otoList[PitchGroup].Count - 1, vvLevel));
+                                    }
+                                }
+                                else
+                                {
+                                    otoList[PitchGroup].Add(otoLine);
+                                }
+                            }
+                            break;
+                        case VoiceBankLanguage.English:
+                            {
+                                var Symbol = G2PA_ENG_Maker.GetSymbolChar(samples[i].PhonemeName, samples[i].SymbolType) + "_" + PitchGroup;
+                                string otoLine = FileName + "=" + Symbol + "," + samples[i].ExportLabel().ToString();
+                                if (samples[i].SymbolType == PhonemeSymbolType.Vowel__Consonant_Vowel ||
+                                    samples[i].SymbolType == PhonemeSymbolType.Vowel_Only)
+                                {
+                                    int vvLevel = (samples[i].SymbolType == PhonemeSymbolType.Vowel_Only) ? 0 : (samples[i].SymbolType == PhonemeSymbolType.Vowel__Consonant_Vowel && samples[i].Phoneme[0].Symbol != samples[i].Phoneme[1].Symbol) ? 1 : 2;
+                                    if (replaceRecordList.ContainsKey(Symbol))
+                                    {
+                                        var curTp = replaceRecordList[Symbol];
+                                        if (curTp.Item2 < vvLevel)
+                                        {
+                                            otoList[PitchGroup][curTp.Item1] = otoLine;
+                                            replaceRecordList[Symbol] = new Tuple<int, int>(curTp.Item1, vvLevel);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        otoList[PitchGroup].Add(otoLine);
+                                        replaceRecordList.Add(Symbol, new Tuple<int, int>(otoList[PitchGroup].Count - 1, vvLevel));
                                     }
                                 }
                                 else
@@ -270,6 +304,10 @@ namespace Mocaloid
 
                 case VoiceBankLanguage.Japanese:
                     G2PA_JPN_Maker.Build(target_folder, pstList, di.VoiceSamples);
+                    break;
+
+                case VoiceBankLanguage.English:
+                    G2PA_ENG_Maker.Build(target_folder, pstList, di.VoiceSamples);
                     break;
             }
 

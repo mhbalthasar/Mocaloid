@@ -8,7 +8,9 @@
 	  <OutputPath>$(SolutionDir)Output\$(Configuration)\</OutputPath>
 	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
 	  <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
-	  <Platforms>AnyCPU;x64</Platforms>
+	  <StartAction>Program</StartAction>
+	  <StartProgram>$(SolutionDir)Output\$(Configuration)\MocaloidGui.exe</StartProgram>
+	  <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
