@@ -1,12 +1,12 @@
 ## 关于Mocaloid
 
-Mocaloid是一个使用Moresample引擎取代VOCALOID合成引擎的传统拼接合成实验引擎。它将尝试一种集成的方法从Vocaloid Daisy VoiceBank中获取必要的采样和标记信息，并交付给Moresample合成声音。
+Mocaloid是一个使用Moresample引擎取代DaisyBell合成引擎的传统拼接合成实验引擎。它将尝试一种集成的方法从VoiceBank中获取必要的采样和标记信息，并交付给Moresample合成声音。
 
 ## 知识库来源
 
 本仓库引用了下列开源项目的研究成果：
 
-DDB文件结构和采样解压方面：
+文件结构和采样解压方面：
 
 1. https://github.com/641i130/ddb-extraction
 2. https://github.com/yuukawahiroshi/ddb-tools
